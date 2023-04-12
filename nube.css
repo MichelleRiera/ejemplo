@@ -1,0 +1,52 @@
+.cloud {
+  position: absolute;
+  top: 100px;
+  width: 150px;
+  height: 80px;
+  background-color: #84e046;
+  border-radius: 50px;
+  box-shadow: 0 0 5px #ca6262;
+  animation: moveCloud 20s linear infinite;
+}
+
+.cloud:nth-child(2) {
+  top: 200px;
+  left: 100px;
+  animation-delay: -5s;
+}
+
+.cloud:nth-child(3) {
+  top: 300px;
+  right: 50px;
+  animation-delay: -10s;
+}
+
+.cloud:before, .cloud:after {
+  content: "";
+  position: absolute;
+  background-color: #dda8e7;
+  border-radius: 50%;
+}
+
+.cloud:before {
+  width: 60px;
+  height: 60px;
+  top: -20px;
+  left: 20px;
+}
+
+.cloud:after {
+  width: 80px;
+  height: 80px;
+  top: -40px;
+  right: 20px;
+}
+
+ @keyframes moveCloud {
+  from {
+    left: -150px;
+  }
+  to {
+    left: 100%;
+  }
+}
